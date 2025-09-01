@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Responsive dimensions for different screen sizes -->
+    
+    <!-- Small screens (320dp and up) -->
+    <dimen name="center_button_size_small">80dp</dimen>
+    <dimen name="branch_button_size_small">50dp</dimen>
+    <dimen name="horizontal_distance_small">200dp</dimen>
+    <dimen name="vertical_step_small">120dp</dimen>
+    
+    <!-- Medium screens (480dp and up) -->
+    <dimen name="center_button_size_medium">100dp</dimen>
+    <dimen name="branch_button_size_medium">60dp</dimen>
+    <dimen name="horizontal_distance_medium">300dp</dimen>
+    <dimen name="vertical_step_medium">150dp</dimen>
+    
+    <!-- Large screens (720dp and up) -->
+    <dimen name="center_button_size_large">120dp</dimen>
+    <dimen name="branch_button_size_large">80dp</dimen>
+    <dimen name="horizontal_distance_large">400dp</dimen>
+    <dimen name="vertical_step_large">200dp</dimen>
+    
+    <!-- Extra large screens (960dp and up) -->
+    <dimen name="center_button_size_xlarge">140dp</dimen>
+    <dimen name="branch_button_size_xlarge">100dp</dimen>
+    <dimen name="horizontal_distance_xlarge">500dp</dimen>
+    <dimen name="vertical_step_xlarge">250dp</dimen>
+    
+    <!-- Profile UI Responsive Dimensions -->
+    
+    <!-- Profile Picture Sizes -->
+    <dimen name="profile_picture_size_small">80dp</dimen>
+    <dimen name="profile_picture_size_medium">100dp</dimen>
+    <dimen name="profile_picture_size_large">120dp</dimen>
+    <dimen name="profile_picture_size_xlarge">140dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="profile_name_text_small">20sp</dimen>
+    <dimen name="profile_name_text_medium">22sp</dimen>
+    <dimen name="profile_name_text_large">24sp</dimen>
+    <dimen name="profile_name_text_xlarge">26sp</dimen>
+    
+    <dimen name="profile_email_text_small">14sp</dimen>
+    <dimen name="profile_email_text_medium">15sp</dimen>
+    <dimen name="profile_email_text_large">16sp</dimen>
+    <dimen name="profile_email_text_xlarge">17sp</dimen>
+    
+    <!-- Card Padding -->
+    <dimen name="card_padding_small">12dp</dimen>
+    <dimen name="card_padding_medium">14dp</dimen>
+    <dimen name="card_padding_large">16dp</dimen>
+    <dimen name="card_padding_xlarge">18dp</dimen>
+    
+    <!-- Statistics Card Sizes -->
+    <dimen name="statistics_number_text_small">20sp</dimen>
+    <dimen name="statistics_number_text_medium">22sp</dimen>
+    <dimen name="statistics_number_text_large">24sp</dimen>
+    <dimen name="statistics_number_text_xlarge">26sp</dimen>
+    
+    <!-- Icon Sizes -->
+    <dimen name="settings_icon_size_small">40dp</dimen>
+    <dimen name="settings_icon_size_medium">44dp</dimen>
+    <dimen name="settings_icon_size_large">48dp</dimen>
+    <dimen name="settings_icon_size_xlarge">52dp</dimen>
+</resources>

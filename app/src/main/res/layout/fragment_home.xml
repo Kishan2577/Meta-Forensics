@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Home">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_profile"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="John Deo"
+            android:textColor="@color/brown"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="#FBD77E"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <!-- Wrap in vertical container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- Camera Preview -->
+                    <androidx.camera.view.PreviewView
+                        android:id="@+id/previewView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        app:implementationMode="performance"/>
+
+                    <!-- Start/Stop buttons BELOW preview -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!-- Start Button -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/startButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:background="@drawable/background1"
+                                android:contentDescription="Start"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_start" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Start"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Stop Button -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/stopButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:background="@drawable/background1"
+                                android:contentDescription="Stop"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_stop" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Stop"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/zoom_out"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                app:tint="@color/black"
+                                android:background="@drawable/background1"
+                                android:contentDescription="Stop"
+                                android:scaleType="centerInside"
+                                android:src="@android:drawable/ic_menu_zoom" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Zoom"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- About Me Section -->
+            <TextView
+                android:id="@+id/tvAboutMeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:text="PEOPLE DETECTED"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <!-- Left avatar/image -->
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="John Doe"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgAvatar"
+                    app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="San Francisco, CA"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                <!-- Accuracy row: progress + percentage -->
+                <LinearLayout
+                    android:id="@+id/accuracyRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation">
+
+                    <ProgressBar
+                        android:id="@+id/pbAccuracy"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E0E0E0"
+                        android:max="100"
+                        android:progress="72"
+                        android:progressTint="#FBD77E" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="72%"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Person 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imgAvatar1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvName1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Kishan Mali"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgAvatar1"
+                    app:layout_constraintTop_toTopOf="@id/imgAvatar1" />
+
+                <TextView
+                    android:id="@+id/tvLocation1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="San Francisco, CA"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName1"
+                    app:layout_constraintTop_toBottomOf="@id/tvName1" />
+
+                <LinearLayout
+                    android:id="@+id/accuracyRow1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName1"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation1">
+
+                    <ProgressBar
+                        android:id="@+id/pbAccuracy1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E0E0E0"
+                        android:max="100"
+                        android:progress="72"
+                        android:progressTint="#FBD77E" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyPercent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="69%"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Person 2 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imgAvatar2"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvName2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Jane Smith"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgAvatar2"
+                    app:layout_constraintTop_toTopOf="@id/imgAvatar2" />
+
+                <TextView
+                    android:id="@+id/tvLocation2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Los Angeles, CA"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName2"
+                    app:layout_constraintTop_toBottomOf="@id/tvName2" />
+
+                <LinearLayout
+                    android:id="@+id/accuracyRow2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName2"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation2">
+
+                    <ProgressBar
+                        android:id="@+id/pbAccuracy2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E0E0E0"
+                        android:max="100"
+                        android:progress="85"
+                        android:progressTint="#FBD77E" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyPercent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="85%"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Person 3 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+
+                <ImageView
+                    android:id="@+id/imgAvatar3"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvName3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Michael Lee"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgAvatar3"
+                    app:layout_constraintTop_toTopOf="@id/imgAvatar3" />
+
+                <TextView
+                    android:id="@+id/tvLocation3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="New York, NY"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName3"
+                    app:layout_constraintTop_toBottomOf="@id/tvName3" />
+
+                <LinearLayout
+                    android:id="@+id/accuracyRow3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvName3"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation3">
+
+                    <ProgressBar
+                        android:id="@+id/pbAccuracy3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E0E0E0"
+                        android:max="100"
+                        android:progress="60"
+                        android:progressTint="#FBD77E" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyPercent3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="60%"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

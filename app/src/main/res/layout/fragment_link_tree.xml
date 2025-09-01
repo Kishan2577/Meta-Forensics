@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LinkTree">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- Line drawing view -->
+        <com.example.finalyearproject.LinkTreeHelper.BranchLinesView
+            android:id="@+id/branchLines"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Center button -->
+        <ImageButton
+            android:id="@+id/centerButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/center_button_background"
+            android:src="@drawable/ic_profile"
+            android:scaleType="fitCenter"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+
+        <!-- 10 branch buttons (all stacked at center initially) -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Kishan Mali"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/branchLines"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/centerButton" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:text="SAVE REPORT"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_camera"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_call"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_edit"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_send"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_share"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_zoom"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_help"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn9"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_manage"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+        <ImageButton
+            android:id="@+id/btn10"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:background="@drawable/branch_button_background"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:tint="@color/black"
+            app:layout_constraintTop_toTopOf="@id/centerButton"
+            app:layout_constraintBottom_toBottomOf="@id/centerButton"
+            app:layout_constraintStart_toStartOf="@id/centerButton"
+            app:layout_constraintEnd_toEndOf="@id/centerButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

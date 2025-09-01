@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brown">#1C1C1E</color>
+    <color name="yellow">#FBD77E</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <color name="bg">#F6F8FF</color>
+    <color name="branchBg">#5061C9</color>
+    <color name="avatarBg">#5B67D6</color>
+    <color name="primaryText">#1E2130</color>
+    <color name="secondaryText">#6B7280</color>
+    
+    <!-- Profile UI Colors -->
+    <color name="purple">#6B46C1</color>
+    <color name="lightPurple">#E9D5FF</color>
+    <color name="lightGray">#F3F4F6</color>
+    <color name="mediumGray">#9CA3AF</color>
+    <color name="darkGray">#374151</color>
+    <color name="lightBlue">#DBEAFE</color>
+    <color name="lightGreen">#D1FAE5</color>
+    <color name="cardShadow">#1F2937</color>
+    
+    <!-- Employee Dashboard Colors -->
+    <color name="teal">#20B2AA</color>
+    <color name="lightTeal">#E0F2F1</color>
+    <color name="darkTeal">#00695C</color>
+    <color name="green">#4CAF50</color>
+    <color name="lightGreenAccent">#E8F5E8</color>
+    <color name="darkGreen">#2E7D32</color>
+    <color name="employeeCardBg">#F8F9FA</color>
+    <color name="tabInactive">#E5E7EB</color>
+    <color name="statusGood">#10B981</color>
+    <color name="statusAverage">#F59E0B</color>
+    <color name="statusPoor">#EF4444</color>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header with close button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/dialogCardTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/dialogCloseButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/black"
+                android:scaleType="fitCenter"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialogCardDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is a demo description for the button. It shows sample content that could be displayed when the button is clicked."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/dialogCardIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_zoom"
+                android:tint="@color/yellow"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/dialogCardStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status: Active"
+                android:textSize="14sp"
+                android:textColor="@color/yellow" />
+
+            <TextView
+                android:id="@+id/dialogCardTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 min ago"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/yellow"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialogCardActionButton1"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Action 1"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/dialogCardActionButton2"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Action 2"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

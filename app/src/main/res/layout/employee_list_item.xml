@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <!-- Employee Profile Picture -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/employeeProfilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:background="@drawable/employee_profile_background"
+                android:scaleType="centerCrop"
+                android:padding="12dp"
+                app:tint="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/employee_profile_border" />
+        </FrameLayout>
+
+        <!-- Employee Information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/employeeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jack Smith"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/employeeId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23232233"
+                android:textSize="14sp"
+                android:textColor="@color/mediumGray" />
+        </LinearLayout>
+
+        <!-- Status and Performance -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <View
+                    android:id="@+id/statusDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/status_dot_good" />
+
+                <TextView
+                    android:id="@+id/employeeStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Status"
+                    android:textSize="12sp"
+                    android:textColor="@color/statusGood"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/employeePerformance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 Units per minute"
+                android:textSize="12sp"
+                android:textColor="@color/mediumGray" />
+        </LinearLayout>
+
+        <!-- Navigation Arrow -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_more"
+            android:scaleType="fitCenter"
+            android:rotation="180"
+            app:tint="@color/mediumGray" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
