@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@android:drawable/ic_menu_myplaces"
-                android:background="@drawable/employee_profile_background"
+                android:background="@drawable/center_button_background"
                 android:scaleType="centerCrop"
                 android:padding="12dp"
                 app:tint="@color/white" />

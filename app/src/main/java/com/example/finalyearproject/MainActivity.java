@@ -84,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
                 return true;
             }
+            else if (id == R.id.nav_item4) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new AllReports())
+                    .commit();
+            return true;
+        }
 
             return false;
         });

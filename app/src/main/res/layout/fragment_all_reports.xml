@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#F9F6EA"
     android:fillViewport="true"
     tools:context=".AllReports">
 
@@ -39,7 +39,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@android:drawable/ic_menu_myplaces"
-                        android:background="@drawable/employee_profile_background"
+                        android:background="@drawable/center_button_background"
                         android:scaleType="centerCrop"
                         android:padding="12dp"
                         app:tint="@color/white" />
@@ -53,7 +53,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ali Vaziri"
+                    android:text="Inspector John Doe"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/black" />
@@ -65,7 +65,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/ic_menu_view"
+                android:src="@android:drawable/ic_delete"
                 android:scaleType="fitCenter"
                 android:padding="12dp"
                 app:tint="@color/darkGray" />
@@ -86,7 +86,7 @@
                 android:layout_marginEnd="8dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/teal">
+                app:cardBackgroundColor="@color/yellow">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                             android:layout_gravity="center"
                             android:src="@android:drawable/ic_menu_add"
                             android:scaleType="fitCenter"
-                            app:tint="@color/teal" />
+                            app:tint="@color/yellow" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -123,9 +123,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Employees present"
+                            android:text=" Active Cases"
                             android:textSize="12sp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:layout_marginBottom="4dp" />
 
                         <TextView
@@ -135,7 +135,7 @@
                             android:text="30"
                             android:textSize="24sp"
                             android:textStyle="bold"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -185,7 +185,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Employees on leave"
+                            android:text="Pending Cases"
                             android:textSize="12sp"
                             android:textColor="@color/white"
                             android:layout_marginBottom="4dp" />
